@@ -3,7 +3,7 @@ name: Docker Image
 on: [push]
 
 env:
-  IMAGE: "andrewgodwin/weatherboard"
+  IMAGE: "chavs1997/weatherboard"
   IMAGE_TAG: ""
   GOOGLECLOUD_PROJECT: ${{ secrets.GOOGLECLOUD_PROJECT }}
 
