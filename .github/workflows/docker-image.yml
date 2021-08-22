@@ -41,4 +41,4 @@ jobs:
       # Deploy to Google Cloud Run
       - name: Deploy
         run: |
-          gcloud run deploy weatherboard --quiet --image gcr.io/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --platform managed --region us-central1 --project $GOOGLECLOUD_PROJECT
+          gcloud run deploy weatherboard-and-zmanim --quiet --image gcr.io/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --platform managed --region us-west1 --project $GOOGLECLOUD_PROJECT
