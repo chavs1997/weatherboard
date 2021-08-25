@@ -78,7 +78,7 @@ class ImageComposer2:
         )
         self.draw_text(
             pos=(470, 20),
-            text="°C",
+            text="°F",
             colour=BLACK,
             font=("regular", 28),
             align="left",
@@ -173,7 +173,7 @@ class ImageComposer2:
         else:
             temp_width = (
                 self.size_text(round(summary["temperature"]), ("regular", 30))[0]
-                + self.size_text("°C", ("regular", 20))[0]
+                + self.size_text("°F", ("regular", 20))[0]
                 + 3
             )
             self.draw_text(
@@ -185,7 +185,7 @@ class ImageComposer2:
             )
             self.draw_text(
                 pos=(left + 50 + (temp_width / 2), top + 160),
-                text="°C",
+                text="°F",
                 colour=BLACK,
                 font=("regular", 20),
                 align="right",
