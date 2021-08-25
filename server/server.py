@@ -20,7 +20,7 @@ def index():
             api_key,
             lat=request.args.get("latitude", "32.85650144973941"),
             long=request.args.get("longitude", "-117.204508815194"),
-            timezone=request.args.get("timezone", "US/Pacific-New"),
+            timezone=request.args.get("timezone", "America/Los_Angeles"),
         )
         output = composer.render()
     else:
@@ -28,7 +28,7 @@ def index():
             api_key,
             lat=request.args.get("latitude", "32.85650144973941"),
             long=request.args.get("longitude", "-117.204508815194"),
-            timezone=request.args.get("timezone", "US/Pacific-New"),
+            timezone=request.args.get("timezone", "America/Los_Angeles"),
         )
         image = composer.render()
         output = BytesIO()
