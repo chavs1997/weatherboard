@@ -21,6 +21,9 @@ class WeatherClient:
             f"https://api.openweathermap.org/data/2.5/air_pollution?lat={self.latitude}&lon={self.longitude}&exclude=minutely&units=imperial&appid={api_key}"
         ).json()
         self.current_time = self.data["current"]["dt"]
+        self.lighting_data = requests.get(
+            f"https://www.hebcal.com/shabbat?cfg=json&zip=92122&M=on&leyning=off"
+        ).json()
 
     def aqi(self):
         headers = {
