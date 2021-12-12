@@ -109,7 +109,7 @@ class WeatherClient:
     def candle_lighting(self):
         for item in self.lighting_data.get("items", []):
             if item["title"].startswith('Candle lighting'):
-                return item["title"]
+                return item["title"][17:]
 
     def active_alerts(self):
         result = []
