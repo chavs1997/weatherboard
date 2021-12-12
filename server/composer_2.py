@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from weather import WeatherClient
 
-IMAGE_SIZE = (600, 448)
+IMAGE_SIZE = (800, 480)
 WHITE = 0
 BLACK = 2
 RED = 1
@@ -110,20 +110,21 @@ class ImageComposer2:
         # Draw on data footer
         left = 20
         top = 390
-        self.draw_icon("sunrise", (left, top), (50, 50))
-        left += 50
-        self.draw_text(
-            pos=(left + 5, top + 10),
-            text=weather.sunrise().astimezone(self.timezone).strftime("%H:%M"),
-            colour=BLACK,
-            font=("bold", 30),
-        )
-        left = 180
-        self.draw_icon("sunset", (left, top), (50, 50))
+        self.draw_icon("ShabbatCandles", (left, top), (50, 50))
         left += 50
         self.draw_text(
             pos=(left + 5, top + 10),
             text=weather.candle_lighting(),
+            #text=weather.sunrise().astimezone(self.timezone).strftime("%H:%M"),
+            colour=BLACK,
+            font=("bold", 30),
+        )
+        left = 180
+        self.draw_icon("Havdalah", (left, top), (50, 50))
+        left += 50
+        self.draw_text(
+            pos=(left + 5, top + 10),
+            text=weather.havdalah(),
             #text=weather.sunset().astimezone(self.timezone).strftime("%H:%M"),
             colour=BLACK,
             font=("bold", 30),
