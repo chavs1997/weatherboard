@@ -123,7 +123,8 @@ class ImageComposer2:
         left += 50
         self.draw_text(
             pos=(left + 5, top + 10),
-            text=weather.sunset().astimezone(self.timezone).strftime("%H:%M"),
+            text=weather.candle_lighting(),
+            #text=weather.sunset().astimezone(self.timezone).strftime("%H:%M"),
             colour=BLACK,
             font=("bold", 30),
         )
