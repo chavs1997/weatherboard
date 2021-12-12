@@ -106,6 +106,10 @@ class WeatherClient:
             "temperature_range": (data["temp"]["min"], data["temp"]["max"]),
             "wind": data["wind_speed"] * 2.2,
         }
+    def candle_lighting(self):
+        for item in self.lighting_data.get("items", []):
+            if item["title"].startswith('Candle lighting'):
+                return item["title"]
 
     def active_alerts(self):
         result = []
