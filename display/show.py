@@ -6,9 +6,9 @@ import time
 
 import requests
 from PIL import Image
-from waveshare_epd import epd5in83bc
+from waveshare_epd import epd7in5bc
 
-IMAGE_SIZE = (600, 448)
+IMAGE_SIZE = (800, 480)
 
 
 def show_image(image):
@@ -31,7 +31,7 @@ def show_image(image):
                     # Black
                     black_image.putpixel((x, y), 0)
     # Send to the display
-    epd = epd5in83bc.EPD()
+    epd = epd7in5bc.EPD()
     epd.init()
     # epd.Clear()
     try:
