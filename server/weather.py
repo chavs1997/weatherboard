@@ -110,6 +110,11 @@ class WeatherClient:
         for item in self.lighting_data.get("items", []):
             if item["title"].startswith('Candle lighting'):
                 return item["title"][17:]
+            
+    def havdalah(self):
+        for item in self.lighting_data.get("items", []):
+            if item["title"].startswith('Havdalah'):
+                return item["title"][10:]
 
     def active_alerts(self):
         result = []
