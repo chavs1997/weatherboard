@@ -98,6 +98,14 @@ class ImageComposer2:
             font=("regular", 40),
             align="centre",
         )
+        self.draw_icon("torah-64", (600, 60), (50, 50))
+        self.draw_text(
+            pos=(660, 60),
+            text=weather.parsha(),
+            colour=BLACK,
+            font=("regular", 40),
+            align="left",
+        )
         # Draw immediate weather
         for (time_offset, left) in [(0, 30), (2600 * 2, 150), (3600 * 6, 270)]:
             top = 130
@@ -110,22 +118,20 @@ class ImageComposer2:
         # Draw on data footer
         left = 20
         top = 390
-        self.draw_icon("ShabbatCandles", (left, top), (50, 50))
+        self.draw_icon("sunrise", (left, top), (50, 50))
         left += 50
         self.draw_text(
             pos=(left + 5, top + 10),
-            text=weather.candle_lighting(),
-            #text=weather.sunrise().astimezone(self.timezone).strftime("%H:%M"),
+            text=weather.sunrise().astimezone(self.timezone).strftime("%H:%M"),
             colour=BLACK,
             font=("bold", 30),
         )
         left = 180
-        self.draw_icon("Havdalah", (left, top), (50, 50))
+        self.draw_icon("sunset", (left, top), (50, 50))
         left += 50
         self.draw_text(
             pos=(left + 5, top + 10),
-            text=weather.havdalah(),
-            #text=weather.sunset().astimezone(self.timezone).strftime("%H:%M"),
+            text=weather.sunset().astimezone(self.timezone).strftime("%H:%M"),
             colour=BLACK,
             font=("bold", 30),
         )
