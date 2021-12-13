@@ -106,7 +106,7 @@ class ImageComposer2:
             font=("regular", 40),
             align="left",
         )
-        self.draw_icon("ShabbatCandles", (500, 400), (60, 50))
+        self.draw_icon("ShabbatCandles", (500, 400), (40, 60))
         self.draw_text(
             pos=(550, 410),
             text=weather.candle_lighting(),
@@ -114,9 +114,9 @@ class ImageComposer2:
             font=("bold", 30),
             align="left",
         )
-        self.draw_icon("Havdalah", (650, 400), (60, 50))
+        self.draw_icon("Havdalah", (650, 400), (40, 60))
         self.draw_text(
-            pos=(700, 410),
+            pos=(690, 410),
             text=weather.havdalah(),
             colour=BLACK,
             font=("bold", 30),
@@ -133,7 +133,7 @@ class ImageComposer2:
         self.draw_weather_column(summary, top, left)
         # Draw on data footer
         left = 20
-        top = 390
+        top = 400
         self.draw_icon("sunrise", (left, top), (50, 50))
         left += 50
         self.draw_text(
