@@ -98,10 +98,26 @@ class ImageComposer2:
             font=("regular", 40),
             align="centre",
         )
-        self.draw_icon("torah-64", (570, 15), (50, 50))
+        self.draw_icon("torah-64", (565, 15), (50, 50))
         self.draw_text(
             pos=(620, 15),
             text=weather.parsha(),
+            colour=BLACK,
+            font=("regular", 40),
+            align="left",
+        )
+        self.draw_icon("ShabbatCandles", (565, 65), (50, 50))
+        self.draw_text(
+            pos=(620, 65),
+            text=weather.candle_lighting(),
+            colour=BLACK,
+            font=("regular", 40),
+            align="left",
+        )
+        self.draw_icon("Havdalah", (565, 115), (50, 50))
+        self.draw_text(
+            pos=(620, 115),
+            text=weather.havdalah(),
             colour=BLACK,
             font=("regular", 40),
             align="left",
