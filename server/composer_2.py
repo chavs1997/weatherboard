@@ -85,22 +85,22 @@ class ImageComposer2:
         )
         temp_min, temp_max = weather.temp_range_24hr()
         self.draw_text(
-            pos=(550, 15),
+            pos=(525, 15),
             text=round(temp_max),
             colour=RED,
             font=("regular", 40),
             align="centre",
         )
         self.draw_text(
-            pos=(550, 60),
+            pos=(525, 60),
             text=round(temp_min),
             colour=BLACK,
             font=("regular", 40),
             align="centre",
         )
-        self.draw_icon("torah-64", (600, 60), (50, 50))
+        self.draw_icon("torah-64", (570, 15), (50, 50))
         self.draw_text(
-            pos=(660, 60),
+            pos=(620, 15),
             text=weather.parsha(),
             colour=BLACK,
             font=("regular", 40),
