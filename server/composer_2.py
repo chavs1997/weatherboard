@@ -106,20 +106,20 @@ class ImageComposer2:
             font=("regular", 40),
             align="left",
         )
-        self.draw_icon("ShabbatCandles", (565, 65), (50, 50))
+        self.draw_icon("ShabbatCandles", (500, 400), (60, 50))
         self.draw_text(
-            pos=(620, 65),
+            pos=(550, 410),
             text=weather.candle_lighting(),
             colour=BLACK,
-            font=("regular", 40),
+            font=("bold", 30),
             align="left",
         )
-        self.draw_icon("Havdalah", (565, 115), (50, 50))
+        self.draw_icon("Havdalah", (650, 400), (60, 50))
         self.draw_text(
-            pos=(620, 115),
+            pos=(700, 410),
             text=weather.havdalah(),
             colour=BLACK,
-            font=("regular", 40),
+            font=("bold", 30),
             align="left",
         )
         # Draw immediate weather
