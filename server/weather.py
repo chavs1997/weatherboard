@@ -132,8 +132,7 @@ class WeatherClient:
                return item["hebrew"][5:]
     
     def times_AlotHashahar(self):
-        for item in self.zmanim_data.get("times", []):
-            return item["alotHaShachar"][11:16]
+        return self.zmanim_data["times"]["alotHaShachar"][11:16]
             
     def times_sofZmanShma(self):
         for item in self.zmanim_data.get("times", []):
