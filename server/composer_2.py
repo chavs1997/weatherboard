@@ -135,6 +135,14 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
+        self.draw_text(
+            pos=(left+50,top),
+            text=u"עֲלוֹת הַשַּׁחַר",
+            colour=BLACK,
+            font=("regular",30),
+            align="left",
+        )
+        
         top+=inc
         self.draw_text(
             pos=(left,top),
