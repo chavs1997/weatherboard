@@ -127,34 +127,33 @@ class WeatherClient:
                 return item["title"][9:]
 
     def parshaHeb(self):
-       for item in self.lighting_data.get("items", []):
-           if item["title"].startswith('Parashat'):
-               return item["hebrew"][5:]          
-    
+        for item in self.lighting_data.get("items", []):
+            if item["title"].startswith('Parashat'):
+               return item["hebrew"][5:]
     
     def times_AlotHashahar(self):
         for item in self.zmanim_data.get("times", []):
-               return item["alotHaShachar"][11:16]
+            return item["alotHaShachar"][11:16]
             
-   def times_sofZmanShma(self):
+    def times_sofZmanShma(self):
         for item in self.zmanim_data.get("times", []):
-               return item["sofZmanShma"][11:16]         
+            return item["sofZmanShma"][11:16]         
     
     def times_sofZmanTfilla(self):
         for item in self.zmanim_data.get("times", []):
-               return item["sofZmanTfilla"][11:16]
+            return item["sofZmanTfilla"][11:16]
     
     def times_chatzot(self):
         for item in self.zmanim_data.get("times", []):
-               return item["chatzot"][11:16]
+            return item["chatzot"][11:16]
     
     def times_minchaGedola(self):
         for item in self.zmanim_data.get("times", []):
-               return item["minchaGedola"][11:16]
+            return item["minchaGedola"][11:16]
             
     def times_minchaKetana(self):
         for item in self.zmanim_data.get("times", []):
-               return item["minchaKetana"][11:16]
+            return item["minchaKetana"][11:16]
     
     #for netz, we already have sunrise
     #for shkiah, we already have sunset
