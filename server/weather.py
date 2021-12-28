@@ -135,24 +135,19 @@ class WeatherClient:
         return self.zmanim_data["times"]["alotHaShachar"][11:16]
             
     def times_sofZmanShma(self):
-        for item in self.zmanim_data.get("times", []):
-            return item["sofZmanShma"][11:16]         
+        return self.zmanim_data["times"]["sofZmanShma"][11:16] 
     
     def times_sofZmanTfilla(self):
-        for item in self.zmanim_data.get("times", []):
-            return item["sofZmanTfilla"][11:16]
+        return self.zmanim_data["times"]["sofZmanTfilla"][11:16] 
     
     def times_chatzot(self):
-        for item in self.zmanim_data.get("times", []):
-            return item["chatzot"][11:16]
+        return self.zmanim_data["times"]["chatzot"][11:16] 
     
     def times_minchaGedola(self):
-        for item in self.zmanim_data.get("times", []):
-            return item["minchaGedola"][11:16]
+        return self.zmanim_data["times"]["minchaGedola"][11:16] 
             
     def times_minchaKetana(self):
-        for item in self.zmanim_data.get("times", []):
-            return item["minchaKetana"][11:16]
+        return self.zmanim_data["times"]["minchaKetana"][11:16] 
     
     #for netz, we already have sunrise
     #for shkiah, we already have sunset
