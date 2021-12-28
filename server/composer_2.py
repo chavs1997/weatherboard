@@ -122,33 +122,34 @@ class ImageComposer2:
             font=("bold", 30),
             align="left",
         )
+        
         #Alot, sofTefillah, Hatzot, minhaGedola
         self.draw_text(
-            pos=(600,190),
+            pos=(660,185),
             text=weather.times_AlotHashahar(),
             colour=BLACK,
-            font=("regular",25),
+            font=("regular",30),
             align="right",
         )
         self.draw_text(
-            pos=(600,160),
+            pos=(660,150),
             text=weather.times_sofZmanTfilla(),
             colour=BLACK,
-            font=("regular",25),
+            font=("regular",30),
             align="right",
         )
         self.draw_text(
-            pos=(600,130),
+            pos=(660,115),
             text=weather.times_chatzot(),
             colour=BLACK,
-            font=("regular",25),
+            font=("regular",30),
             align="right",
         )
         self.draw_text(
-            pos=(600,100),
+            pos=(660,80),
             text=weather.times_minchaGedola(),
             colour=BLACK,
-            font=("regular",25),
+            font=("regular",30),
             align="right",
         )
         
