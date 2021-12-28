@@ -128,7 +128,8 @@ class ImageComposer2:
         left = 665
         top = 160
         inc = 35
-        txtInc = 37
+        txtInc = 29
+        hebFont=ImageFont.truetype("/Library/Fonts/Arial Unicode.ttf",30)
         
         self.draw_text(
             pos=(left,top),
@@ -141,7 +142,7 @@ class ImageComposer2:
             pos=(left+txtInc,top),
             text=u"עלות השחר",
             colour=BLACK,
-            font=("regular",30),
+            font=hebFont,
             align="left",
         )
         
