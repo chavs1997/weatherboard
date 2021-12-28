@@ -24,7 +24,12 @@ class WeatherClient:
         self.lighting_data = requests.get(
             f"https://www.hebcal.com/shabbat?cfg=json&zip=92122&M=on&leyning=off"
         ).json()
-
+        self.zmanim_data = requests.get(
+            f"https://www.hebcal.com/zmanim?cfg=json&zip=92122"
+        ).json()
+        
+        
+        
     def aqi(self):
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67",
@@ -125,6 +130,38 @@ class WeatherClient:
        for item in self.lighting_data.get("items", []):
            if item["title"].startswith('Parashat'):
                return item["hebrew"][5:]          
+    
+    
+    def times_AlotHashahar(self):
+        for item in self.zmanim_data.get("times", []):
+               return item["alotHaShachar"][11:16]
+            
+   def times_sofZmanShma(self):
+        for item in self.zmanim_data.get("times", []):
+               return item["sofZmanShma"][11:16]         
+    
+    def times_sofZmanTfilla(self):
+        for item in self.zmanim_data.get("times", []):
+               return item["sofZmanTfilla"][11:16]
+    
+    def times_chatzot(self):
+        for item in self.zmanim_data.get("times", []):
+               return item["chatzot"][11:16]
+    
+    def times_minchaGedola(self):
+        for item in self.zmanim_data.get("times", []):
+               return item["minchaGedola"][11:16]
+            
+    def times_minchaKetana(self):
+        for item in self.zmanim_data.get("times", []):
+               return item["minchaKetana"][11:16]
+    
+    #for netz, we already have sunrise
+    #for shkiah, we already have sunset
+    # Alot, Sof Tefillah, Hatzot, and minha ketana should be displayed
+    
+    
+    
             
     def active_alerts(self):
         result = []
