@@ -121,6 +121,11 @@ class WeatherClient:
             if item["title"].startswith('Parashat'):
                 return item["title"][9:]
 
+    def parshaHeb(self):
+       for item in self.lighting_data.get("items", []):
+           if item["title"].startswith('Parashat'):
+               return item["hebrew"][5:]          
+            
     def active_alerts(self):
         result = []
         for alert in self.data.get("alerts", []):
