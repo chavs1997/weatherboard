@@ -122,6 +122,13 @@ class ImageComposer2:
             font=("bold", 30),
             align="left",
         )
+        self.draw_text(
+            pos=(570,175),
+            text=weather.times_AlotHashahar(),
+            colour=BLACK,
+            font=("regular",20),
+            align="left"
+        )
         # Draw immediate weather
         for (time_offset, left) in [(0, 30), (2600 * 2, 150), (3600 * 6, 270)]:
             top = 130
