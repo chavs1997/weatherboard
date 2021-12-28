@@ -123,35 +123,43 @@ class ImageComposer2:
             align="left",
         )
         
+        
         #Alot, sofTefillah, Hatzot, minhaGedola
+        left = 665
+        top = 160
+        inc = 35
         self.draw_text(
-            pos=(660,150),
+            pos=(left,top),
             text=weather.times_AlotHashahar(),
             colour=BLACK,
             font=("regular",30),
             align="right",
         )
+        top+=inc
         self.draw_text(
-            pos=(660,185),
+            pos=(left,top),
             text=weather.times_sofZmanTfilla(),
             colour=BLACK,
             font=("regular",30),
             align="right",
         )
+        top+=inc
         self.draw_text(
-            pos=(660,220),
+            pos=(left,top),
             text=weather.times_chatzot(),
             colour=BLACK,
             font=("regular",30),
             align="right",
         )
+        top+=inc
         self.draw_text(
-            pos=(660,255),
+            pos=(left,top),
             text=weather.times_minchaGedola(),
             colour=BLACK,
             font=("regular",30),
             align="right",
         )
+        top+=inc
         
         # Draw immediate weather
         for (time_offset, left) in [(0, 30), (2600 * 2, 150), (3600 * 6, 270)]:
