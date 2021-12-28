@@ -128,6 +128,8 @@ class ImageComposer2:
         left = 665
         top = 160
         inc = 35
+        txtInc = 37
+        
         self.draw_text(
             pos=(left,top),
             text=weather.times_AlotHashahar(),
@@ -136,8 +138,8 @@ class ImageComposer2:
             align="right",
         )
         self.draw_text(
-            pos=(left+50,top),
-            text=u"עֲלוֹת הַשַּׁחַר",
+            pos=(left+txtInc,top),
+            text=u"עלות השחר",
             colour=BLACK,
             font=("regular",30),
             align="left",
