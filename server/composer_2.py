@@ -129,7 +129,7 @@ class ImageComposer2:
         top = 160
         inc = 35
         txtInc = 29
-        hebFont=ImageFont.truetype("/fonts/DavidLibre-Regular.ttf",30)
+        hebFont=ImageFont.truetype(os.path.join("fonts", "DavidLibre-Regular.ttf"),30)
         
         self.draw_text(
             pos=(left,top),
