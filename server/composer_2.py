@@ -12,6 +12,7 @@ BLACK = 2
 RED = 1
 PALETTE = [255, 255, 255, 200, 0, 0, 0, 0, 0]
 fonts = {}
+fonts[("hebrew",30)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=30)
 icons = {}
 
 
@@ -129,7 +130,6 @@ class ImageComposer2:
         top = 160
         inc = 35
         txtInc = 29
-        fonts["hebrew"] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=30)
         #hebFont=ImageFont.truetype(os.path.join(os.path.dirname(__file__),"fonts", "DavidLibre-Regular.ttf"),30)
         
         self.draw_text(
