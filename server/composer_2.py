@@ -129,7 +129,7 @@ class ImageComposer2:
         top = 160
         inc = 35
         txtInc = 29
-        hebFont=ImageFont.truetype("DavidLibre-Regular.ttf")
+        fonts["hebrew"] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=30)
         #hebFont=ImageFont.truetype(os.path.join(os.path.dirname(__file__),"fonts", "DavidLibre-Regular.ttf"),30)
         
         self.draw_text(
@@ -143,7 +143,7 @@ class ImageComposer2:
             pos=(left+txtInc,top),
             text=u"עלות השחר",
             colour=BLACK,
-            font=hebFont,
+            font=("hebrew",30),
             align="left",
         )
         
