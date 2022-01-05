@@ -145,7 +145,7 @@ class ImageComposer2:
             colour=BLACK,
             font=("hebrew",27),
             align="left",
-            direction="rtl",
+            #direction="rtl",
         )
         
         top+=inc
