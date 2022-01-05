@@ -11,8 +11,9 @@ WHITE = 0
 BLACK = 2
 RED = 1
 PALETTE = [255, 255, 255, 200, 0, 0, 0, 0, 0]
+fontSize = 27
 fonts = {}
-fonts[("hebrew",30)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=27)
+fonts[("hebrew",fontSize)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSize)
 icons = {}
 
 
@@ -130,7 +131,6 @@ class ImageComposer2:
         top = 160
         inc = 35
         txtInc = 25
-        #hebFont=ImageFont.truetype(os.path.join(os.path.dirname(__file__),"fonts", "DavidLibre-Regular.ttf"),30)
         
         self.draw_text(
             pos=(left,top),
@@ -143,7 +143,7 @@ class ImageComposer2:
             pos=(left+txtInc,top),
             text=u"רחשה תולע",
             colour=BLACK,
-            font=("hebrew",27),
+            font=("hebrew",fontSize),
             align="left",
         )
         
