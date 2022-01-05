@@ -127,10 +127,10 @@ class ImageComposer2:
         
         
         #Alot, sofTefillah, Hatzot, minhaGedola
-        left = 665
+        left = 660
         top = 160
         inc = 35
-        txtInc = 25
+        txtInc = 20
         
         self.draw_text(
             pos=(left,top),
@@ -155,13 +155,13 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
-#        self.draw_text(
-#            pos=(left+txtInc,top),
-#            text=u"הליפת ןמז ףוס",
-#            colour=BLACK,
-#            font=("hebrew",27),
-#            align="left",
-#        )
+        self.draw_text(
+            pos=(left+txtInc,top),
+            text=u"הליפת ןמז ףוס",
+            colour=BLACK,
+            font=("hebrew",fontSize),
+            align="left",
+        )
         
         top+=inc
         self.draw_text(
@@ -171,13 +171,13 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
-#        self.draw_text(
-#            pos=(left+txtInc,top),
-#            text=u"תוצח",
-#            colour=BLACK,
-#            font=("hebrew",27),
-#            align="left",
-#        )
+        self.draw_text(
+            pos=(left+txtInc,top),
+            text=u"תוצח",
+            colour=BLACK,
+            font=("hebrew",fontSize),
+            align="left",
+        )
         
         top+=inc
         self.draw_text(
@@ -187,13 +187,13 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
-#        self.draw_text(
-#            pos=(left+txtInc,top),
-#            text=u"הלודג החנמ",
-#            colour=BLACK,
-#            font=("hebrew",27),
-#            align="left",
-#        )
+        self.draw_text(
+            pos=(left+txtInc,top),
+            text=u"הלודג החנמ",
+            colour=BLACK,
+            font=("hebrew",fontSize),
+            align="left",
+        )
         
         top+=inc
         
