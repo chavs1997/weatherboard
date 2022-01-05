@@ -12,7 +12,7 @@ BLACK = 2
 RED = 1
 PALETTE = [255, 255, 255, 200, 0, 0, 0, 0, 0]
 fonts = {}
-fonts[("hebrew",30)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=30)
+fonts[("hebrew",30)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=27)
 icons = {}
 
 
@@ -143,7 +143,7 @@ class ImageComposer2:
             pos=(left+txtInc,top),
             text=u"רחשה תולע",
             colour=BLACK,
-            font=("hebrew"),
+            font=("hebrew",27),
             align="left",
         )
         
