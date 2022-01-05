@@ -11,7 +11,7 @@ WHITE = 0
 BLACK = 2
 RED = 1
 PALETTE = [255, 255, 255, 200, 0, 0, 0, 0, 0]
-fontSize = 27
+fontSize = 23
 fonts = {}
 fonts[("hebrew",fontSize)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSize)
 icons = {}
@@ -127,10 +127,10 @@ class ImageComposer2:
         
         
         #Alot, sofTefillah, Hatzot, minhaGedola
-        left = 660
+        left = 650
         top = 160
         inc = 35
-        txtInc = 20
+        txtInc = 10
         
         self.draw_text(
             pos=(left,top),
