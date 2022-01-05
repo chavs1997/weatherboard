@@ -141,11 +141,10 @@ class ImageComposer2:
         )
         self.draw_text(
             pos=(left+txtInc,top),
-            text=u"עלות השחר",
+            text=u"רחשה תולע",
             colour=BLACK,
             font=("hebrew",27),
             align="left",
-            #direction="rtl",
         )
         
         top+=inc
@@ -156,6 +155,14 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
+        self.draw_text(
+            pos=(left+txtInc,top),
+            text=u"הליפת ןמז ףוס",
+            colour=BLACK,
+            font=("hebrew",27),
+            align="left",
+        )
+        
         top+=inc
         self.draw_text(
             pos=(left,top),
@@ -164,6 +171,14 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
+        self.draw_text(
+            pos=(left+txtInc,top),
+            text=u"תוצח",
+            colour=BLACK,
+            font=("hebrew",27),
+            align="left",
+        )
+        
         top+=inc
         self.draw_text(
             pos=(left,top),
@@ -172,6 +187,14 @@ class ImageComposer2:
             font=("regular",30),
             align="right",
         )
+        self.draw_text(
+            pos=(left+txtInc,top),
+            text=u"הלודג החנמ",
+            colour=BLACK,
+            font=("hebrew",27),
+            align="left",
+        )
+        
         top+=inc
         
         # Draw immediate weather
