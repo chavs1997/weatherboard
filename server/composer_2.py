@@ -129,7 +129,7 @@ class ImageComposer2:
         left = 665
         top = 160
         inc = 35
-        txtInc = 29
+        txtInc = 25
         #hebFont=ImageFont.truetype(os.path.join(os.path.dirname(__file__),"fonts", "DavidLibre-Regular.ttf"),30)
         
         self.draw_text(
@@ -143,8 +143,9 @@ class ImageComposer2:
             pos=(left+txtInc,top),
             text=u"עלות השחר",
             colour=BLACK,
-            font=("hebrew",30),
+            font=("hebrew",27),
             align="left",
+            direction="rtl",
         )
         
         top+=inc
