@@ -5,6 +5,7 @@ import pytz
 from PIL import Image, ImageDraw, ImageFont
 
 from weather import WeatherClient
+from tachanun import tachanun_today
 
 IMAGE_SIZE = (800, 480)
 WHITE = 0
@@ -72,13 +73,13 @@ class ImageComposer2:
         )
         #Hebrew date inclusion
         hebDaySize = self.draw_text(
-            pos=(60, 90),
+            pos=(20, 115),
             text="Shvat",
             colour=BLACK,
             font=("bold", 30),
         )
         self.draw_text(
-            pos=(60+hebDaySize[0], 90),
+            pos=(60+hebDaySize[0]+2, 115),
             text="123",
             colour=RED,
             font=("bold", 30),
