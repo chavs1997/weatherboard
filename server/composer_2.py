@@ -16,7 +16,7 @@ fontSize = 23
 fonts = {}
 fonts[("hebrew",fontSize)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSize)
 icons = {}
-hebDate = tachanun_today();
+hebDate = tachanun_today()
 
 class ImageComposer2:
     def __init__(self, api_key, lat, long, timezone):
