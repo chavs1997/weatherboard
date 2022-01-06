@@ -16,7 +16,7 @@ fontSize = 23
 fonts = {}
 fonts[("hebrew",fontSize)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSize)
 icons = {}
-
+hebDate = tachanun_today();
 
 class ImageComposer2:
     def __init__(self, api_key, lat, long, timezone):
@@ -73,13 +73,13 @@ class ImageComposer2:
         )
         #Hebrew date inclusion
         hebDaySize = self.draw_text(
-            pos=(20, 115),
+            pos=(20, 105),
             text="Shvat",
             colour=BLACK,
             font=("bold", 30),
         )
         self.draw_text(
-            pos=(60+hebDaySize[0]+2, 115),
+            pos=(20+hebDaySize[0]+2, 105),
             text="123",
             colour=RED,
             font=("bold", 30),
