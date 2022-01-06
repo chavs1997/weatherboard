@@ -5,7 +5,7 @@ import pytz
 from PIL import Image, ImageDraw, ImageFont
 
 from weather import WeatherClient
-from tachanun import tachanun_today
+#from tachanun import tachanun_today
 
 IMAGE_SIZE = (800, 480)
 WHITE = 0
