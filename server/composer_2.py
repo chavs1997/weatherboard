@@ -215,7 +215,7 @@ class ImageComposer2:
         
         # Draw immediate weather
         for (time_offset, left) in [(0, 30), (2600 * 2, 150), (3600 * 6, 270)]:
-            top = 130
+            top = 145
             summary = weather.hourly_summary(time_offset)
             self.draw_weather_column(summary, top, left)
         # Draw tomorrow
