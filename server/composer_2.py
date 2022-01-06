@@ -70,6 +70,21 @@ class ImageComposer2:
             colour=BLACK,
             font=("bold", 30),
         )
+        #Hebrew date inclusion
+        hebDaySize = self.draw_text(
+            pos=(60, 90),
+            text="Shvat",
+            colour=BLACK,
+            font=("bold", 30),
+        )
+        self.draw_text(
+            pos=(60+hebDaySize[0], 90),
+            text="123",
+            colour=RED,
+            font=("bold", 30),
+        )
+        
+        
         # Draw on weather header
         self.draw_text(
             pos=(470, 10),
