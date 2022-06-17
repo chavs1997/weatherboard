@@ -6,7 +6,6 @@ import pytz
 from PIL import Image, ImageDraw, ImageFont
 import jewishcalendar
 from weather import WeatherClient
-#from tachanun import tachanun_today
 
 IMAGE_SIZE = (800, 480)
 WHITE = 0
@@ -17,7 +16,6 @@ fontSize = 23
 fonts = {}
 fonts[("hebrew",fontSize)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSize)
 icons = {}
-#hebDate = tachanun_today()
 
 class ImageComposer2:
     def __init__(self, api_key, lat, long, timezone):
@@ -147,7 +145,7 @@ class ImageComposer2:
             font=("bold", 30),
             align="left",
         )
-        if weather.tachanun_today()
+        if weather.tachanun_today():
             self.draw_icon("tachanun", (650,115), (35, 35))
         
         #Alot, sofTefillah, Hatzot, minhaGedola
