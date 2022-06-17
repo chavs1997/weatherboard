@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v1
 
       # Setup gcloud CLI
-      - uses: google-github-actions/setup-gcloud@master
+      - uses: google-github-actions/setup-gcloud@main
         with:
           project_id: ${{ secrets.GOOGLECLOUD_PROJECT }}
           service_account_key: ${{ secrets.GOOGLECLOUD_KEY }}
