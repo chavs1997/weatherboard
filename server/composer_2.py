@@ -146,7 +146,7 @@ class ImageComposer2:
             align="left",
         )
         if weather.tachanun_today():
-            self.draw_icon("tachanun", (600,90), (50, 50))
+            self.draw_icon("tachanun", (600,80), (100, 100))
         
         #Alot, sofTefillah, Hatzot, minhaGedola
         left = 650
