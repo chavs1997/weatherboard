@@ -4,7 +4,6 @@ import os
 
 import pytz
 from PIL import Image, ImageDraw, ImageFont
-import jewishcalendar
 from weather import WeatherClient
 
 IMAGE_SIZE = (800, 480)
@@ -30,12 +29,6 @@ class ImageComposer2:
         weather.load(self.api_key)
         # Work out time
         now = datetime.datetime.now(self.timezone)
-        year = date.today().year
-        month = date.today().month
-        day= date.today().day
-        absdate = jewishcalendar.gregorian_to_absdate(year, month, day)
-        hebYear, hebMonth, hebDay = jewishcalendar.absdate_to_hebrew(absdate)
-        hebMonth = jewishcalendar.getJewishMonthName(hebMonth, year)
         # Create image
         self.image = Image.new("P", IMAGE_SIZE, 0)
         self.image.putpalette(PALETTE)
@@ -79,17 +72,10 @@ class ImageComposer2:
         #Hebrew date inclusion
         hebDaySize = self.draw_text(
             pos=(20, 105),
-            text=hebMonth,
+            text=weather.hebrew_Date()[::-1],
             colour=BLACK,
-            font=("bold", 30),
-        )
-        self.draw_text(
-            pos=(20+hebDaySize[0]+5, 105),
-            text=hebDay,
-            colour=RED,
-            font=("bold", 30),
-        )
-        
+            font=("hebrew", 30),
+        )        
         
         # Draw on weather header
         self.draw_text(
