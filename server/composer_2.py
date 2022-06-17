@@ -116,7 +116,7 @@ class ImageComposer2:
             font=("regular", 40),
             align="centre",
         )
-        self.draw_icon("torah-64", (550, 15), (35, 35))
+        self.draw_icon("torah-64", (560, 15), (35, 35))
         self.draw_text(
             pos=(600, 15),
             text=weather.parsha(),
