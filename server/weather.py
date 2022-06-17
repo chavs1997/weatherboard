@@ -70,6 +70,9 @@ class WeatherClient:
     
     def tachanun_today(self):
         return self.tachanun_data["tachanun_today"]
+    
+    def hebrew_Date(self):
+        return self.tachanun_data["hebrew_date_hebrew"]
 
     def sunrise(self):
         return datetime.utcfromtimestamp(self.data["current"]["sunrise"]).replace(
