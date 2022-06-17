@@ -116,12 +116,12 @@ class ImageComposer2:
             font=("regular", 40),
             align="centre",
         )
-        self.draw_icon("torah-64", (565, 15), (50, 50))
+        self.draw_icon("torah-64", (550, 15), (35, 35))
         self.draw_text(
-            pos=(620, 15),
+            pos=(600, 15),
             text=weather.parsha(),
             colour=BLACK,
-            font=("regular", 40),
+            font=("regular", 35),
             align="left",
         )
         self.draw_icon("ShabbatCandles", (500, 400), (40, 60))
