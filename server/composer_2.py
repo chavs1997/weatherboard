@@ -12,8 +12,11 @@ BLACK = 2
 RED = 1
 PALETTE = [255, 255, 255, 200, 0, 0, 0, 0, 0]
 fontSize = 23
+fontSizeLarge = 30
 fonts = {}
 fonts[("hebrew",fontSize)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSize)
+fonts[("hebrewLarge",fontSizeLarge)] = ImageFont.truetype("fonts/DavidLibre-Regular.ttf", size=fontSizeLarge)
+
 icons = {}
 
 class ImageComposer2:
@@ -74,7 +77,8 @@ class ImageComposer2:
             pos=(20, 105),
             text=weather.hebrew_Date()[::-1],
             colour=BLACK,
-            font=("hebrew", 30),
+            font=("hebrewLarge", fontSizeLarge),
+            align="left",
         )        
         
         # Draw on weather header
