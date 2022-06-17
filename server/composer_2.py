@@ -37,7 +37,7 @@ class ImageComposer2:
         day= date.today().day
         absdate = jewishcalendar.gregorian_to_absdate(year, month, day)
         hebYear, hebMonth, hebDay = jewishcalendar.absdate_to_hebrew(absdate)
-        hebMonth = jewishcalendar.getJewishMonthName(month, year)
+        hebMonth = jewishcalendar.getJewishMonthName(hebMonth, year)
         # Create image
         self.image = Image.new("P", IMAGE_SIZE, 0)
         self.image.putpalette(PALETTE)
