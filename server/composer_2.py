@@ -33,10 +33,11 @@ class ImageComposer2:
         # Work out time
         now = datetime.datetime.now(self.timezone)
         year = date.today().year
-        month = jewishcalendar.getJewishMonthName(date.today().month, year)
+        month = date.today().month
         day= date.today().day
         absdate = jewishcalendar.gregorian_to_absdate(year, month, day)
         hebYear, hebMonth, hebDay = jewishcalendar.absdate_to_hebrew(absdate)
+        hebMonth = jewishcalendar.getJewishMonthName(month, year)
         # Create image
         self.image = Image.new("P", IMAGE_SIZE, 0)
         self.image.putpalette(PALETTE)
