@@ -198,3 +198,36 @@ def absdate_to_gregorian(absdate):
   day = absdate-temp+1;
 
   return (year, month, day)
+
+def getJewishMonthName(month, year):
+
+  if month == 1:
+    return "Nisan"
+  elif month == 2:
+    return "Iyyar"
+  elif month == 3:
+    return "Sivan"
+  elif month == 4:
+    return "Tammuz"
+  elif month == 5:
+    return "Av"
+  elif month == 6:
+    return "Elul"
+  elif month == 7:
+    return "Tishri"
+  elif month == 8:
+    return "Heshvan"
+  elif month == 9:
+    return "Kislev"
+  elif month == 10:
+    return "Teveth"
+  elif month == 11:
+    return "Shevat"
+  elif month == 12:
+    if jewishcalendar.hebrew_leap(year):
+      return "Adar I"
+    else:
+      return "Adar"
+    
+  elif month == 13:
+    return "Adar II"
