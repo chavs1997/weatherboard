@@ -33,7 +33,7 @@ class ImageComposer2:
         # Work out time
         now = datetime.datetime.now(self.timezone)
         year = date.today().year
-        month = date.today().month
+        month = jewishcalendar.getJewishMonthName(date.today().month, year)
         day= date.today().day
         absdate = jewishcalendar.gregorian_to_absdate(year, month, day)
         hebYear, hebMonth, hebDay = jewishcalendar.absdate_to_hebrew(absdate)
