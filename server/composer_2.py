@@ -162,7 +162,7 @@ class ImageComposer2:
             align="right",
         )
         self.draw_text(
-            pos=(left+txtInc,top),
+            pos=(left+txtInc,top+4),
             text=u"רחשה תולע",
             colour=BLACK,
             font=("hebrew",fontSize),
@@ -178,7 +178,7 @@ class ImageComposer2:
             align="right",
         )
         self.draw_text(
-            pos=(left+txtInc,top),
+            pos=(left+txtInc,top+4),
             text=u"הליפת ןמז ףוס",
             colour=BLACK,
             font=("hebrew",fontSize),
@@ -194,7 +194,7 @@ class ImageComposer2:
             align="right",
         )
         self.draw_text(
-            pos=(left+txtInc,top),
+            pos=(left+txtInc,top+4),
             text=u"תוצח",
             colour=BLACK,
             font=("hebrew",fontSize),
@@ -210,7 +210,7 @@ class ImageComposer2:
             align="right",
         )
         self.draw_text(
-            pos=(left+txtInc,top),
+            pos=(left+txtInc,top+4),
             text=u"הלודג החנמ",
             colour=BLACK,
             font=("hebrew",fontSize),
