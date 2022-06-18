@@ -94,7 +94,7 @@ class WeatherClient:
                 break
         data = d1
         # Format a summary
-        dt = datetime.utcfromtimestamp(data["dt"]).replace(tzinfo=pytz.utc)
+        dt = datetime.datetime.utcfromtimestamp(data["dt"]).replace(tzinfo=pytz.utc)
         hour = dt.astimezone(self.timezone).strftime("%H").lstrip("0")
         if hour == "":
             hour = "0"
@@ -116,7 +116,7 @@ class WeatherClient:
         data = self.data["daily"][day_offset]
         # Format a summary
         return {
-            "date": datetime.utcfromtimestamp(data["dt"]).replace(tzinfo=pytz.utc),
+            "date": datetime.datetime.utcfromtimestamp(data["dt"]).replace(tzinfo=pytz.utc),
             "icon": self.code_to_icon(data["weather"][0]["id"]),
             "description": data["weather"][0]["main"].title(),
             "temperature_range": (data["temp"]["min"], data["temp"]["max"]),
