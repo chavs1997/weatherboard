@@ -12,6 +12,7 @@ class WeatherClient:
         self.latitude = float(latitude)
         self.longitude = float(longitude)
         self.timezone = timezone
+        self.date = datetime.datetime.now(pytz.timezone('US/Pacific')).date()
 
     def load(self, api_key):
         self.data = requests.get(
@@ -28,7 +29,7 @@ class WeatherClient:
             f"https://www.hebcal.com/zmanim?cfg=json&zip=92122"
         ).json()
         self.tachanun_data = requests.get(
-            f"http://www.istheretachanuntoday.com/api"
+            f"http://www.istheretachanuntoday.com/api?gregorian_date={self.date}"
         ).json()
         
         
