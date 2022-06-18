@@ -13,7 +13,7 @@ class WeatherClient:
         self.latitude = float(latitude)
         self.longitude = float(longitude)
         self.timezone = timezone
-        self.date = datetime.datetime.now(timezone).date()
+        self.date = datetime.datetime.now(timezone).date().strftime('%Y-%m-%d')
 
     def load(self, api_key):
         self.data = requests.get(
