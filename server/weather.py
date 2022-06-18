@@ -3,7 +3,7 @@ import pytz
 import math
 import requests
 import datetime
-from datetime import date, datetime
+from datetime import date
 
 from requests.api import head
 
