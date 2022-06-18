@@ -2,7 +2,8 @@ import time
 import pytz
 import math
 import requests
-from datetime import datetime
+import datetime
+from datetime import date
 
 from requests.api import head
 
@@ -12,7 +13,7 @@ class WeatherClient:
         self.latitude = float(latitude)
         self.longitude = float(longitude)
         self.timezone = timezone
-        self.date = datetime.datetime.now(pytz.timezone('US/Pacific')).date()
+        self.date = datetime.now(pytz.timezone('US/Pacific')).date()
 
     def load(self, api_key):
         self.data = requests.get(
