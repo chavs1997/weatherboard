@@ -73,13 +73,13 @@ class ImageComposer2:
             font=("bold", 30),
         )
         #Hebrew date inclusion
-        hebDaySize = self.draw_text(
-            pos=(20, 105),
-            text=weather.hebrew_Date()[::-1],
-            colour=BLACK,
-            font=("hebrewLarge", fontSizeLarge),
-            align="left",
-        )        
+        #hebDaySize = self.draw_text(
+            #pos=(20, 105),
+            #text=weather.hebrew_Date()[::-1],
+            #colour=BLACK,
+            #font=("hebrewLarge", fontSizeLarge),
+            #align="left",
+        #)        
         
         # Draw on weather header
         self.draw_text(
@@ -135,8 +135,8 @@ class ImageComposer2:
             font=("bold", 30),
             align="left",
         )
-        if weather.tachanun_today():
-            self.draw_icon("tachanun", (600,70), (100, 100))
+        #if weather.tachanun_today():
+            #self.draw_icon("tachanun", (600,70), (100, 100))
         
         #Alot, sofTefillah, Hatzot, minhaGedola
         left = 650
