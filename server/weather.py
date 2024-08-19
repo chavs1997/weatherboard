@@ -29,9 +29,9 @@ class WeatherClient:
         self.zmanim_data = requests.get(
             f"https://www.hebcal.com/zmanim?cfg=json&zip=92122"
         ).json()
-        self.tachanun_data = requests.get(
-            f"http://www.istheretachanuntoday.com/api?gregorian_date={self.date}"
-        ).json()
+        #self.tachanun_data = requests.get(
+            #f"http://www.istheretachanuntoday.com/api?gregorian_date={self.date}"
+        #).json()
         
         
         
@@ -70,11 +70,11 @@ class WeatherClient:
     def humidity_current(self):
         return self.data["current"]["humidity"]
     
-    def tachanun_today(self):
-        return self.tachanun_data["tachanun_today"]
+    #def tachanun_today(self):
+        #return self.tachanun_data["tachanun_today"]
     
-    def hebrew_Date(self):
-        return self.tachanun_data["hebrew_date_hebrew"]
+    #def hebrew_Date(self):
+        #return self.tachanun_data["hebrew_date_hebrew"]
 
     def sunrise(self):
         return datetime.datetime.utcfromtimestamp(self.data["current"]["sunrise"]).replace(
