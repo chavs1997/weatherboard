@@ -24,6 +24,6 @@ ADD . /srv/weatherboard/
 # Add fonts
 RUN mkdir /usr/share/fonts && cp /srv/weatherboard/fonts/Roboto* /usr/share/fonts && fc-cache
 
-# Runtime
+# Runtime check
 ENV PORT 80
 CMD ["/bin/sh", "-c", "exec gunicorn --bind :$PORT --workers 1 --threads 8 server:app"]
