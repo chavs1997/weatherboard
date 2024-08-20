@@ -36,7 +36,6 @@ jobs:
       # Push the Docker image to Google Container Registry
       - name: Publish
         run: |
-          gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us-west1-docker.pkg.dev
           docker push gcr.io/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG
 
       # Deploy to Google Cloud Run
