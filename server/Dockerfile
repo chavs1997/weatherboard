@@ -15,7 +15,7 @@ RUN apk update && apk add \
 # Codebase setup
 RUN mkdir /srv/weatherboard/
 WORKDIR /srv/weatherboard/
-RUN pip3 install requests pillow flask gunicorn pytz pycairo jewish jinja2 fonttools
+RUN pip3 install requests pillow==9.5.0 flask gunicorn pytz pycairo jewish jinja2 fonttools
 
 # Add code
 ENV PYTHONPATH /srv/weatherboard/server/
