@@ -12,17 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-      # Setup gcloud CLI
-      - uses: google-github-actions/setup-gcloud@main
+      - id: auth
+        uses: google-github-actions/auth@v1
         with:
-          project_id: ${{ secrets.GOOGLECLOUD_PROJECT }}
-          service_account_key: ${{ secrets.GOOGLECLOUD_KEY }}
+          credentials_json: ${{ secrets.GOOGLECLOUD_KEY }}
+      
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
 
       # Configure docker to use the gcloud command-line tool as a credential helper
       - name: "Authenticate Docker"
-        run: gcloud auth configure-docker us-west1-docker.pkg.dev
+        run: gcloud auth configure-docker us-west1-docker.pkg.dev --quiet
 
       # Calculate the image name
       - name: Calculate Docker image name
@@ -41,4 +43,4 @@ jobs:
       # Deploy to Google Cloud Run
       - name: Deploy
         run: |
-          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --project $GOOGLECLOUD_PROJECT
+          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG
