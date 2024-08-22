@@ -31,14 +31,14 @@ jobs:
       # Build the Docker image
       - name: Build
         run: |
-          docker build -t us-docker.pkg.dev/"$GOOGLECLOUD_PROJECT"/"$IMAGE":"$IMAGE_TAG" server
+          docker build -t us-west1-docker.pkg.dev/"$GOOGLECLOUD_PROJECT"/"$IMAGE":"$IMAGE_TAG" server
 
       # Push the Docker image to Google Container Registry
       - name: Publish
         run: |
-          docker push us-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG
+          docker push us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG
 
       # Deploy to Google Cloud Run
       - name: Deploy
         run: |
-          gcloud run deploy weatherboard-and-zmanim --quiet --image us-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --region us-west1 --project $GOOGLECLOUD_PROJECT
+          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --region us-west1 --project $GOOGLECLOUD_PROJECT
