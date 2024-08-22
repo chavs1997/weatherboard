@@ -332,7 +332,7 @@ class ImageComposer2:
                 "fonts/Roboto-%s.ttf" % font[0].title(), size=font[1]
             )
         # Calculate size
-        size = self.draw.textlength(str(text), font=fonts[font])
+        size = self.draw.textsize(str(text), font=fonts[font])
         # Draw
         x, y = pos
         if align == "right":
@@ -352,7 +352,7 @@ class ImageComposer2:
                 "fonts/Roboto-%s.ttf" % font[0].title(), size=font[1]
             )
         # Calculate size
-        return self.draw.textlength(str(text), font=fonts[font])
+        return self.draw.textsize(str(text), font=fonts[font])
 
     def draw_icon(self, icon, pos, size):
         """
