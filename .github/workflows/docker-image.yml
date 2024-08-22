@@ -43,4 +43,4 @@ jobs:
       # Deploy to Google Cloud Run
       - name: Deploy
         run: |
-          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG
+          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --region us-west1
