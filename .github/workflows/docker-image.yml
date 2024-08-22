@@ -22,7 +22,7 @@ jobs:
 
       # Configure docker to use the gcloud command-line tool as a credential helper
       - name: "Authenticate Docker"
-        run: gcloud auth configure-docker
+        run: gcloud auth configure-docker us-west1-docker.pkg.dev
 
       # Calculate the image name
       - name: Calculate Docker image name
@@ -41,4 +41,4 @@ jobs:
       # Deploy to Google Cloud Run
       - name: Deploy
         run: |
-          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --region us-west1 --project $GOOGLECLOUD_PROJECT
+          gcloud run deploy weatherboard-and-zmanim --quiet --image us-west1-docker.pkg.dev/$GOOGLECLOUD_PROJECT/$IMAGE:$IMAGE_TAG --project $GOOGLECLOUD_PROJECT
