@@ -17,7 +17,7 @@ class WeatherClient:
 
     def load(self, api_key):
         self.data = requests.get(
-            f"https://api.openweathermap.org/data/2.5/onecall?lat={self.latitude}&lon={self.longitude}&exclude=minutely&units=imperial&appid={api_key}"
+            f"https://api.openweathermap.org/data/3.0/onecall?lat={self.latitude}&lon={self.longitude}&exclude=minutely&units=imperial&appid={api_key}"
         ).json()
         self.pollution_data = requests.get(
             f"https://api.openweathermap.org/data/2.5/air_pollution?lat={self.latitude}&lon={self.longitude}&exclude=minutely&units=imperial&appid={api_key}"
